@@ -4,10 +4,49 @@
               name="Hospital"
               sequence="10"/>
 
-    <menuitem id="hospital_menu_recode"
-              name="Recode"
+    <menuitem id="hospital_menu_record"
+              name="Record"
               parent="hospital_menu_root"
               sequence="10"/>
 
+    <menuitem id="hospital_menu_department"
+              name="Department"
+              parent="hospital_menu_root"
+              sequence="15"/>
 
+
+    <menuitem id="hospital_menu_staff"
+              name="Staff record"
+              action="hospital_staff__vi"
+              parent="hospital_menu_record"
+              sequence="5"/>
+
+    <menuitem id="hospital_patient__cardiology"
+              name="Cardiology"
+              parent="hospital_menu_department"
+              action="hospital_cardiology__view"
+              sequence="15"/>
+
+    <menuitem id="hospital_menu_patient"
+              name="Patient"
+              parent="hospital_menu_record"
+              action="hospital_patient__vi"
+              sequence="10"/>
+
+    <menuitem id="hospital_menu_medical"
+              name="Medical"
+              parent="hospital_menu_record"
+              action="hospital_medical__vi"
+              sequence="15"/>
+
+    <menuitem id="hospital_menu_medicine"
+              name="Order medicine"
+              parent="hospital_menu_root"
+              sequence="20"/>
+
+    <menuitem id="hospital_menu_medical"
+              name="Capsules."
+              parent="hospital_menu_medicine"
+              action="hospital_medical__vi"
+              sequence="15"/>
 </odoo>

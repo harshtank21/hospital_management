@@ -16,6 +16,7 @@ You could use this simplified accounting in case you work with an (external) acc
     'data': [
         'views/hospital_hospital_views.xml',
         'views/menu.xml',
+        'views/hospital_department.xml',
         'security/ir.model.access.csv'
     ],
     'installable': True,

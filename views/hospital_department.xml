@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="department_form_view">
+        <field name="name">department.form.view</field>
+        <field name="model">hospital.department</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="age"/>
+                        </group>
+                        <group>
+                            <field name="time"/>
+                            <field name="name"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="department_tree_view">
+        <field name="name">department.tree.view</field>
+        <field name="model">hospital.department</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="age"/>
+                <field name="time"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hospital_cardiology__view" model="ir.actions.act_window">
+        <field name="name">Cardiology</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.department</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+</odoo>

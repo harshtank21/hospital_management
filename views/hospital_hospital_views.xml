@@ -20,6 +20,7 @@
             </form>
         </field>
     </record>
+
     <record model="ir.ui.view" id="hospital_tree_view">
         <field name="name">hospital.tree.view</field>
         <field name="model">hospital.hospital</field>
@@ -39,9 +40,17 @@
         <field name="res_model">hospital.hospital</field>
         <field name="view_mode">tree,form</field>
     </record>
-    <menuitem id="hospital_menu_patient"
-              name="patient"
-              parent="hospital_menu_recode"
-              action="hospital_patient__vi"
-              sequence="10"/>
+
+    <record id="hospital_staff__vi" model="ir.actions.act_window">
+        <field name="name">stfa</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.hospital</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="hospital_medical__vi" model="ir.actions.act_window">
+        <field name="name">medical</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.hospital</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 </odoo>

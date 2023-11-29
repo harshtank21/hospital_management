@@ -1,0 +1,9 @@
+from odoo import models,fields
+
+class Hospital_department(models.Model):
+    _name = "hospital.department"
+    _description = "Hospital_department"
+    name=fields.Char(string="Name", required=True)
+    age=fields.Integer(string="age")
+    time=fields.Selection([("11:00","11:00"),("12:00","12:00"),("1:00","1:00"),("2:00","2:00"),("3:00","3:00")],string="select")
+    # is_balak=fields.Boolean(string="is balak")

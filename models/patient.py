@@ -1,4 +1,5 @@
 from odoo import models,fields
+from datetime import time,datetime
 
 class Hospital_managemnet(models.Model):
     _name = "hospital.hospital"
