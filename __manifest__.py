@@ -12,12 +12,16 @@ You could use this simplified accounting in case you work with an (external) acc
     """,
     'category': 'Accounting/Accounting',
     'website': 'https://www.odoo.com/app/invoicing',
-    'depends' : ['base'],
+    'depends' : ['base',"contacts","sale"],
     'data': [
         'views/hospital_hospital_views.xml',
         'views/menu.xml',
         'views/hospital_department.xml',
-        'security/ir.model.access.csv'
+        'security/ir.model.access.csv',
+        'views/medicine.xml',
+        'views/contact.xml',
+        'views/sale.xml'
+
     ],
     'installable': True,
     'application': True,

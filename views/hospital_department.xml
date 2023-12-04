@@ -13,6 +13,7 @@
                         <group>
                             <field name="time"/>
                             <field name="name"/>
+                            <field name="relatives_ids"/>
                         </group>
                     </group>
                 </sheet>
@@ -28,6 +29,7 @@
                 <field name="name"/>
                 <field name="age"/>
                 <field name="time"/>
+                <field name="relatives_ids"/>
             </tree>
         </field>
     </record>
@@ -38,5 +40,9 @@
         <field name="res_model">hospital.department</field>
         <field name="view_mode">tree,form,kanban</field>
     </record>
-
+    <menuitem id="hospital_patient__cardiology"
+              name="Cardiology"
+              parent="hospital_menu_department"
+              action="hospital_cardiology__view"
+              sequence="15"/>
 </odoo>

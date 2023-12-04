@@ -9,18 +9,21 @@
                     <group>
                         <group>
                             <field name="age"/>
-                            <field name="is_balak"/>
+                            <field name="is_child"/>
+                            <field name="peracitemol"/>
+                            <field name="relative_id"/>
                         </group>
                         <group>
                             <field name="old_new"/>
                             <field name="name"/>
+                            <field name="patientrecord"/>
+                            <field name="patient_id"/>
                         </group>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
-
     <record model="ir.ui.view" id="hospital_tree_view">
         <field name="name">hospital.tree.view</field>
         <field name="model">hospital.hospital</field>
@@ -28,8 +31,11 @@
             <tree>
                 <field name="name"/>
                 <field name="age"/>
-                <field name="is_balak"/>
+                <field name="is_child"/>
                 <field name="old_new"/>
+                <field name="patientrecord"/>
+                <field name="relative_id"/>
+                <field name="patient_id"/>
             </tree>
         </field>
     </record>
@@ -42,13 +48,7 @@
     </record>
 
     <record id="hospital_staff__vi" model="ir.actions.act_window">
-        <field name="name">stfa</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="res_model">hospital.hospital</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-    <record id="hospital_medical__vi" model="ir.actions.act_window">
-        <field name="name">medical</field>
+        <field name="name">staff</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">hospital.hospital</field>
         <field name="view_mode">tree,form</field>

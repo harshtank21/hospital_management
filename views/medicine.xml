@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="medicine_form_view">
+        <field name="name">department.form.view</field>
+        <field name="model">hospital.medicine</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="age"/>
+                            <!--                            <field name="peracitemol"/>-->
+                        </group>
+                        <group>
+                            <field name="add_img"/>
+                            <field name="medicine"/>
+                            <field name="type"/>
+                            <field name="made"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="medicine_tree_view">
+        <field name="name">department.tree.view</field>
+        <field name="model">hospital.medicine</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="age"/>
+                <field name="add_img"/>
+                <field name="medicine"/>
+                <field name="type"/>
+                <field name="made"/>
+            </tree>
+        </field>
+    </record>
+    <record id="hospital_medical__vi" model="ir.actions.act_window">
+        <field name="name">medical</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.medicine</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="hospital_menu_medical"
+              name="Medical"
+              parent="hospital_menu_record"
+              action="hospital_medical__vi"
+              sequence="15"/>
+    <menuitem id="hospital_menu_medical"
+              name="Capsules."
+              parent="hospital_menu_medicine"
+              action="hospital_medical__vi"
+              sequence="15"/>
+</odoo>
