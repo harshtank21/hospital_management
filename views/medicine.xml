@@ -10,7 +10,8 @@
                         <group>
                             <field name="name"/>
                             <field name="age"/>
-                            <!--                            <field name="peracitemol"/>-->
+                            <button name="object_test" string="click " type="object" class="oe_highlight"></button>
+                            <button name="%(hospital_medical__vi)d" string="tap" type="action" class="oe_highlight"></button>
                         </group>
                         <group>
                             <field name="add_img"/>
@@ -28,6 +29,7 @@
         <field name="model">hospital.medicine</field>
         <field name="arch" type="xml">
             <tree>
+
                 <field name="name"/>
                 <field name="age"/>
                 <field name="add_img"/>
@@ -53,4 +55,37 @@
               parent="hospital_menu_medicine"
               action="hospital_medical__vi"
               sequence="15"/>
+
+
+    <menuitem id="report_sales_team_one"
+              name="SALES_TEAMS"
+              parent="hospital_menu_medicine"
+              action="sales_team.crm_team_action_sales"
+              sequence="25"
+
+    />
+    <record id="action_website_one" model="ir.actions.act_url">
+        <field name="name">Website</field>
+        <field name="url">https://zydushospitals.com/#top-tab1</field>
+    </record>
+
+    <menuitem id="report_sales_team_location"
+              name="location"
+              action="action_website_one"
+              parent="hospital_menu_medicine"
+              sequence="45"
+
+    />
+    <menuitem id="sale.report_sales_team_five"
+              name="SALES_TEAMS_2"
+              parent="report_sales_team_one"
+              action="account.action_move_out_invoice_type"
+              sequence="25"
+    />
+    <!--    <record id="account.action_move_out_invoice_type" model="ir.actions.act_window">-->
+    <!--        <field name="name">one two</field>-->
+    <!--        <field name="res_model">account.move</field>-->
+    <!--        <field name="view_mode">kanban</field>-->
+    <!--    </record>-->
 </odoo>
+

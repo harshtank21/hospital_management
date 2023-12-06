@@ -8,8 +8,9 @@
                 <sheet>
                     <group>
                         <group>
+                            <field name="hospital_name"/>
                             <field name="age"/>
-                            <field name="is_child"/>
+                            <field name="is_children"/>
                             <field name="peracitemol"/>
                             <field name="relative_id"/>
                         </group>
@@ -31,7 +32,7 @@
             <tree>
                 <field name="name"/>
                 <field name="age"/>
-                <field name="is_child"/>
+                <field name="is_children"/>
                 <field name="old_new"/>
                 <field name="patientrecord"/>
                 <field name="relative_id"/>

@@ -1,4 +1,4 @@
-from odoo import models,fields
+from odoo import models,fields,api
 
 class Hospital_medicine(models.Model):
     _name = "hospital.medicine"
@@ -11,3 +11,5 @@ class Hospital_medicine(models.Model):
     made=fields.Many2one("hospital.hospital",string="made")
     # peracitemol=fields.Many2many('hospital.hospital',"capsule_medicine","hospital_id","medicine_id",string="peracitemol")
 
+    def object_test(self):
+        print("button_click______________________________________________________")

@@ -20,7 +20,6 @@
             </form>
         </field>
     </record>
-
     <record model="ir.ui.view" id="department_tree_view">
         <field name="name">department.tree.view</field>
         <field name="model">hospital.department</field>
@@ -45,4 +44,8 @@
               parent="hospital_menu_department"
               action="hospital_cardiology__view"
               sequence="15"/>
+
+
 </odoo>
+
+
