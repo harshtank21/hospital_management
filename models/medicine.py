@@ -10,6 +10,18 @@ class Hospital_medicine(models.Model):
     medicine=fields.Char(string="Medicine Name")
     made=fields.Many2one("hospital.hospital",string="made")
     # peracitemol=fields.Many2many('hospital.hospital',"capsule_medicine","hospital_id","medicine_id",string="peracitemol")
+    gender=fields.Selection([("male","MALE"),("female","FEMALE"),("other","OTHER")],string="gender")
+
+
+
+    pai=fields.Many2one("hospital.hospital",string="onehospital")
+    paione=fields.Many2one("hospital.department",
+                           string="diphospital",
+                           domain=[("paione",'=','pai.id')])
 
     def object_test(self):
         print("button_click______________________________________________________")
+
+
+
+

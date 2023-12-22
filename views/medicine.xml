@@ -11,15 +11,24 @@
                             <field name="name"/>
                             <field name="age"/>
                             <button name="object_test" string="click " type="object" class="oe_highlight"></button>
-                            <button name="%(hospital_medical__vi)d" string="tap" type="action" class="oe_highlight"></button>
+                            <button name="%(hospital_cardiology__view)d" string="tap" type="action"
+                                    class="oe_highlight"></button>
+                            <field name="gender"/>
                         </group>
                         <group>
                             <field name="add_img"/>
                             <field name="medicine"/>
                             <field name="type"/>
                             <field name="made"/>
+                            <field name="pai"/>
+                            <field name="paione"/>
                         </group>
                     </group>
+                    <notebook>
+                        <page string="Order Lines" name="order_lines">
+                            <!--                <field name="order_line"/>-->
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -29,13 +38,14 @@
         <field name="model">hospital.medicine</field>
         <field name="arch" type="xml">
             <tree>
-
                 <field name="name"/>
                 <field name="age"/>
                 <field name="add_img"/>
                 <field name="medicine"/>
                 <field name="type"/>
                 <field name="made"/>
+                <field name="gender"/>
+<!--                <field name="name_two"/>-->
             </tree>
         </field>
     </record>
@@ -43,6 +53,7 @@
         <field name="name">medical</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">hospital.medicine</field>
+<!--        <field name="context"></field>-->
         <field name="view_mode">tree,form</field>
     </record>
     <menuitem id="hospital_menu_medical"

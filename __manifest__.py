@@ -12,7 +12,7 @@ You could use this simplified accounting in case you work with an (external) acc
     """,
     'category': 'Accounting/Accounting',
     'website': 'https://www.odoo.com/app/invoicing',
-    'depends' : ['base',"contacts","sale","account"],
+    'depends' : ['base',"contacts","sale_management","account","product"],
     'data': [
         'views/hospital_hospital_views.xml',
         'views/menu.xml',
