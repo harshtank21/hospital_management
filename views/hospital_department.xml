@@ -10,6 +10,7 @@
                         <group>
                             <field name="age"/>
                             <field name="new_one"/>
+<!--                            <field name="gun"/>-->
                         </group>
                         <group>
                             <field name="time"/>
@@ -39,6 +40,7 @@
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">hospital.department</field>
         <field name="view_mode">tree,form,kanban</field>
+
     </record>
     <menuitem id="hospital_patient__cardiology"
               name="Cardiology"

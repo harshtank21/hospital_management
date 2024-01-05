@@ -21,7 +21,6 @@
               sequence="5"/>
 
 
-
     <menuitem id="hospital_menu_patient"
               name="Patient"
               parent="hospital_menu_record"
@@ -29,10 +28,28 @@
               sequence="10"/>
 
 
-
     <menuitem id="hospital_menu_medicine"
               name="Order medicine"
               parent="hospital_menu_root"
               sequence="20"/>
+    <record model="ir.ui.view" id="sa_order_view_inherit">
+        <field name="name">recs.view.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_template_id']" position="attributes">
+                <attribute name="context">{
+                    'partner_id': parent.partner_id,
+                    'quantity': product_uom_qty,
+                    'pricelist': parent.pricelist_id,
+                    'uom':product_uom,
+                    'company_id': parent.company_id,
+                    'default_list_price': price_unit,
+                    'default_description_sale': name,
+                    'code_match': True}
+                </attribute>
+            </xpath>
+        </field>
+    </record>
 
 </odoo>

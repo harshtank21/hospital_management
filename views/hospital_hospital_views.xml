@@ -6,11 +6,11 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <button name="ggggggggg" string="click " type="object" class="oe_highlight"></button>
                     <group>
                         <group>
                             <field name="hospital_name"/>
                             <field name="age"/>
-                            <field name="is_children"/>
                             <field name="peracitemol"/>
                             <field name="relative_id"/>
                             <field name="bod"/>
@@ -18,11 +18,14 @@
                         <group>
                             <field name="old_new"/>
                             <field name="name"/>
+                            <field name="active"/>
                             <field name="patientrecord"/>
                             <field name="patient_id"/>
-<!--                            <field name="name_two"/>-->
+                            <!--                            <field name="name_two"/>-->
                             <field name="gender"/>
                             <field name="namedd"/>
+                            <field name="is_children" attrs="{'invisible':
+            [('gender','=','male')] }"/>
                         </group>
                     </group>
                 </sheet>
@@ -35,12 +38,9 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="name_two"/>
-                <field name="age"/>
+                <field name="active"/>
                 <field name="is_children"/>
                 <field name="old_new"/>
-                <field name="patientrecord"/>
-                <field name="relative_id"/>
                 <field name="patient_id"/>
                 <field name="gender"/>
             </tree>
@@ -59,6 +59,17 @@
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">hospital.hospital</field>
         <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.ui.view" id="m_rec_view_inherit">
+        <field name="name">rec.view.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="display_name"/>
+            </xpath>
+        </field>
     </record>
 </odoo>
 

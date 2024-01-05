@@ -20,7 +20,7 @@ You could use this simplified accounting in case you work with an (external) acc
         'security/ir.model.access.csv',
         'views/medicine.xml',
         'views/contact.xml',
-        'views/sale.xml'
+        # 'views/sale.xml'
 
     ],
     'installable': True,
